@@ -3,6 +3,7 @@ using System.Web.Mvc;
 
 namespace BookStore.Controllers
 {
+    [RoutePrefix("teste")]    
     public class TesteController : Controller
     {
         
@@ -32,6 +33,12 @@ namespace BookStore.Controllers
         public JsonResult Action2(Author author) 
         {
             return Json(author);
+        }
+
+        [Route("minharota")]
+        public string MyRoute()
+        {
+            return "Ok! Cheguei na Rota!";
         }
     }
 }

@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\BookStoreDataContext.cs" />
+    <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TesteController.cs" />
     <Compile Include="Global.asax.cs">
@@ -142,6 +143,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoutesContraints\ValuesConstraint.cs" />
     <Compile Include="ViewModels\BookAuthorDetailsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +198,10 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Teste\Data.cshtml" />
+    <Content Include="Views\Author\Create.cshtml" />
+    <Content Include="Views\Author\Delete.cshtml" />
+    <Content Include="Views\Author\Read.cshtml" />
+    <Content Include="Views\Author\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

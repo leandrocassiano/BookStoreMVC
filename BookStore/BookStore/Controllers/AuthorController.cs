@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace BookStore.Controllers
 {
     [RoutePrefix("autores")]
-    [LogActionFilter()]
+    //[LogActionFilter()]
     public class AuthorController : Controller
     {
         [Route("criar")]

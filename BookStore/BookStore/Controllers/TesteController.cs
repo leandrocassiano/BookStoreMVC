@@ -35,10 +35,22 @@ namespace BookStore.Controllers
             return Json(author);
         }
 
-        [Route("minharota")]
-        public string MyRoute()
+        [Route("rota/{categoria:minlength(3)}")]
+        public string MyRoute(string categoria)
         {
-            return "Ok! Cheguei na Rota!";
+            return "Ok! Cheguei na Rota!" + categoria;
+        }
+
+        [Route("rota-alpha/{categoria:alpha:minlength(3)}")]
+        public string MyRouteAlpha(string categoria)
+        {
+            return "Ok! Cheguei na Rota!" + categoria;
+        }
+
+        [Route("rota/estacao/{estacao:values(primavera|verao|outono|inverno)}")]
+        public string MyRoute3(string estacao)
+        {
+            return "Ok! Estamos no!" + estacao;
         }
     }
 }

@@ -1,0 +1,34 @@
+﻿@model BookStore.ViewModels.UpdateBookViewModel
+
+@{
+    ViewBag.Title = "Criando um novo Livro....";
+}
+
+@helper MyFunction(string name)
+{
+    <text>Você está logado como: @name </text>
+}
+
+<p>
+    @MyFunction("Joao Melão")
+</p>
+
+
+<h2>Novo Livro</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("Partials/UpdateBookPartial", Model)
+    <div class="col-form-label">
+        <button type="submit" class="btn btn-primary">Criar</button>
+    </div>
+
+    @*
+        <div class="col-auto">
+            @Html.DropDownListFor(model => model.CategoryId,
+                                  Model.CategoryOptions,
+                                  "Selecione uma opção...")
+        </div>
+        */
+    *@
+}

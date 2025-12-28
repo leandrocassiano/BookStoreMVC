@@ -19,7 +19,17 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary(true, "", new { @class = "text-danger"})
+    
+    <div class="alert alert-danger">
+        @Html.ValidationMessage("Mensagem")
+    </div>
+
     @Html.Partial("Partials/UpdateBookPartial", Model)
+
+    @Html.EditorFor(x => x.Age)
+    @Html.ValidationMessageFor(x => x.Age)
+
     <div class="col-form-label">
         <button type="submit" class="btn btn-primary">Criar</button>
     </div>

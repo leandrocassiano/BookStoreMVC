@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using BookStore.Validators;
+using System;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace BookStore.ViewModels
@@ -27,5 +25,8 @@ namespace BookStore.ViewModels
         [Required(ErrorMessage = "**")]
         public int CategoryId { get; set; }
         public SelectList CategoryOptions { get; set; }
+
+        [CheckAgeValidator]
+        public DateTime Age { get; set; }
     }
 }

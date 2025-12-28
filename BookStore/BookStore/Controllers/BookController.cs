@@ -1,6 +1,10 @@
-﻿using BookStore.Domain;
+﻿using BookStore.Context;
+using BookStore.Domain;
 using BookStore.ViewModels;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace BookStore.Controllers
@@ -22,7 +26,7 @@ namespace BookStore.Controllers
 
         [Route("criar")]
         public ActionResult Create()
-        {           
+        {
             /*
             var categorys = _db.Categories.ToList();
 
@@ -52,15 +56,6 @@ namespace BookStore.Controllers
         [HttpPost]
         public ActionResult Create(UpdateBookViewModel model)
         {
-            /*    
-            if (!ModelState.IsValid)
-            {
-                var categorys = _db.Categories.ToList();
-                model.CategoryOptions = new SelectList(categorys);
-                return View(model);
-            }
-            */
-
             var book = new Book();
 
             book.Title = model.Title;
@@ -68,22 +63,7 @@ namespace BookStore.Controllers
             book.ReleaseDate = model.ReleaseDate;
             book.CategoryId = model.CategoryId;
             // _db.Books.Add(book);
-            
-            try
-            {
-                throw new Exception("Falha no Banco");
-                // _db.SaveChanges();
-            }
-
-            catch (Exception ex)
-            {
-                /*  
-                ModelState.AddModelError("Mensagem", ex.Message)
-                var categorys = _db.Categories.ToList();
-                model.CategoryOptions = new SelectList(categorys);
-                return View(model);
-               */
-            }
+            // _db.SaveChanges();
 
             return RedirectToAction("Index");
         }

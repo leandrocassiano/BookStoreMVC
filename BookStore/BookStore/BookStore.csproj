@@ -148,15 +148,10 @@
     <Compile Include="Repositories\AuthorRepository.cs" />
     <Compile Include="Repositories\Contracts\IAuthorRepository.cs" />
     <Compile Include="RoutesContraints\ValuesConstraint.cs" />
-    <Compile Include="Validators\CheckAgeValidator.cs" />
     <Compile Include="ViewModels\BookAuthorDetailsViewModel.cs" />
     <Compile Include="ViewModels\UpdateBookViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\BookStoreDataContext.mdf" />
-    <Content Include="App_Data\BookStoreDataContext_log.ldf">
-      <DependentUpon>BookStoreDataContext.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -219,7 +214,9 @@
     <Content Include="Views\Book\Update.cshtml" />
     <Content Include="Views\Shared\_NewLayout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />

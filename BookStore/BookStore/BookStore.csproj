@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\BookStoreDataContext.cs" />
     <Compile Include="Controllers\AuthorController.cs" />
+    <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TesteController.cs" />
     <Compile Include="Filters\LogActionFilter.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="Repositories\Contracts\IAuthorRepository.cs" />
     <Compile Include="RoutesContraints\ValuesConstraint.cs" />
     <Compile Include="ViewModels\BookAuthorDetailsViewModel.cs" />
+    <Compile Include="ViewModels\UpdateBookViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-grid.css" />
@@ -205,6 +207,12 @@
     <Content Include="Views\Author\Delete.cshtml" />
     <Content Include="Views\Author\Read.cshtml" />
     <Content Include="Views\Author\Update.cshtml" />
+    <Content Include="Views\Book\Create.cshtml" />
+    <Content Include="Views\Book\Index.cshtml" />
+    <Content Include="Views\Book\Partials\ListBookPartial.cshtml" />
+    <Content Include="Views\Book\Partials\UpdateBookPartial.cshtml" />
+    <Content Include="Views\Book\Update.cshtml" />
+    <Content Include="Views\Shared\_NewLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

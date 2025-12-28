@@ -1,12 +1,13 @@
 # ==============================
 # Visual Studio
 # ==============================
-.vs
 .vs/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.csproj.dtbcache.json
+DocumentLayout.json
 
 # ==============================
 # Build results
@@ -22,15 +23,11 @@ obj/
 *.pdb
 
 # ==============================
-# Logs
+# App_Data (bancos locais, arquivos gerados)
 # ==============================
-*.log
-
-# ==============================
-# OS
-# ==============================
-Thumbs.db
-Desktop.ini
+App_Data/
+*.mdf
+*.ldf
 
 # ==============================
 # NuGet
@@ -40,7 +37,18 @@ packages/
 .nuget/
 
 # ==============================
-# Rider / VSCode (opcional)
+# Logs
+# ==============================
+*.log
+
+# ==============================
+# IDEs / Editors
 # ==============================
 .idea/
 .vscode/
+
+# ==============================
+# OS
+# ==============================
+Thumbs.db
+Desktop.ini
